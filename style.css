@@ -9,13 +9,54 @@ header {
     text-align: center;
     padding: 20px;
 }
-samp
+
 main {
     padding: 20px;
 }
 
 section {
     margin-bottom: 30px;
+}
+
+nav {
+    background-color: #12343b;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.proyectos-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.proyecto {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.redes-sociales {
+    margin-top: 10px;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
 }
 
 h2 {
