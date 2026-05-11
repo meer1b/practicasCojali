@@ -115,3 +115,70 @@ footer {
     text-decoration: underline;
 } 
 
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .proyectos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proyecto {
+        width: 90%;
+    }
+}
+
+/* Colores para el Modo Oscuro */
+body.dark {
+    background-color: #121212; /* Fondo casi negro */
+    color: #e0e0e0;            /* Texto gris claro */
+}
+
+body.dark h2 {
+    background-color: #0d2a2f; /* Un tono más oscuro del azul original */
+    border-bottom-color: #444;
+}
+
+body.dark h3 {
+    color: #4db6ac;            /* Un color que resalte sobre oscuro */
+}
+
+body.dark .proyecto {
+    border-color: #444;
+    background-color: #1e1e1e;
+}
+
+body.dark nav {
+    background-color: #0a1d21;
+}
+
+/* Ajuste para los inputs en modo oscuro */
+body.dark input, 
+body.dark textarea {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
+}
+
+#cambiarTema {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
