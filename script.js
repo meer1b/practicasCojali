@@ -21,3 +21,53 @@ toggle.addEventListener("click", () => {
         toggle.textContent = "🌙";
     }
 });
+
+
+
+
+
+
+
+
+
+
+const habilidades = [
+    { nombre: "HTML" },
+    { nombre: "CSS" },
+    { nombre: "Java" },
+    { nombre: "SQL" },
+    { nombre: "JavaScript" }
+];
+
+
+const listaHabilidades = document.getElementById("lista-habilidades");
+const habilidadForm = document.getElementById("habilidad-form");
+
+
+
+function mostrarHabilidades() {
+    listaHabilidades.innerHTML = "";
+    habilidades.forEach(habilidad => {
+        const elemento = document.createElement("p");
+        elemento.textContent = habilidad.nombre;
+        listaHabilidades.appendChild(elemento);
+    });
+}
+
+
+habilidadForm.addEventListener("submit", function () {
+    event.preventDefault();
+    const inputHabilidad =
+        document.getElementById("nombre-habilidad");
+    const nuevaHabilidad = {
+        nombre: inputHabilidad.value
+    };
+
+    habilidades.push(nuevaHabilidad);
+    mostrarHabilidades();
+    habilidadForm.reset();
+});
+
+
+mostrarHabilidades();
+
