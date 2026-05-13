@@ -34,33 +34,29 @@
 
         <section id="habilidades">
             <h2>Habilidades</h2>
-
-            <div id="lista-habilidades"></div>
-
-            <h3>Añadir habilidad</h3>
-
-            <form id="habilidad-form">
-
-                <input type="text" id="nombre-habilidad"
-                    placeholder="Nombre de la habilidad" required>
-
-                <button type="submit">Añadir</button>
-
-            </form>
+            <div id="lista-habilidades">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Java</p>
+                <p>SQL</p>
+                <p>JavaScript</p>
+            </div>
         </section>
 
         <section id="formacion">
             <h2>Formación</h2>
 
-            <article>
-                <h3>CFGS DAM</h3>
-                <p>IES Gregorio Prieto (Actualidad)</p>
-            </article>
+            <div id="lista-estudios"></div>
 
-            <article>
-                <h3>CFGM SMR</h3>
-                <p>IES Gregorio Prieto (2023 - 2025)</p>
-            </article>
+            <button id="btn-form-estudio">Añadir estudio</button>
+
+            <form id="form-estudio" style="display:none; margin-top:10px;">
+                <input type="text" id="titulo-estudio" placeholder="Título" required>
+                <input type="text" id="centro-estudio" placeholder="Centro" required>
+                <input type="text" id="fecha-estudio" placeholder="Fecha" required>
+
+                <button type="submit">Guardar</button>
+            </form>
         </section>
 
         <section id="experiencia">

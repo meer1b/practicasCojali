@@ -24,50 +24,65 @@ toggle.addEventListener("click", () => {
 
 
 
+const listaEstudios = document.getElementById("lista-estudios");
+const formEstudio = document.getElementById("form-estudio");
+const btnFormEstudio = document.getElementById("btn-form-estudio");
 
-
-
-
-
-
-
-const habilidades = [
-    { nombre: "HTML" },
-    { nombre: "CSS" },
-    { nombre: "Java" },
-    { nombre: "SQL" },
-    { nombre: "JavaScript" }
+const estudios = [
+    {
+        titulo: "CFGS DAM",
+        centro: "IES Gregorio Prieto",
+        fecha: "Actualidad"
+    },
+    {
+        titulo: "CFGM SMR",
+        centro: "IES Gregorio Prieto",
+        fecha: "2023 - 2025"
+    }
 ];
 
+function mostrarEstudios() {
+    listaEstudios.innerHTML = "";
 
-const listaHabilidades = document.getElementById("lista-habilidades");
-const habilidadForm = document.getElementById("habilidad-form");
+    estudios.forEach(estudio => {
+        const article = document.createElement("article");
 
+        article.innerHTML = `
+            <h3>${estudio.titulo}</h3>
+            <p>${estudio.centro}</p>
+            <p>${estudio.fecha}</p>
+        `;
 
-
-function mostrarHabilidades() {
-    listaHabilidades.innerHTML = "";
-    habilidades.forEach(habilidad => {
-        const elemento = document.createElement("p");
-        elemento.textContent = habilidad.nombre;
-        listaHabilidades.appendChild(elemento);
+        listaEstudios.appendChild(article);
     });
 }
 
-
-habilidadForm.addEventListener("submit", function () {
-    event.preventDefault();
-    const inputHabilidad =
-        document.getElementById("nombre-habilidad");
-    const nuevaHabilidad = {
-        nombre: inputHabilidad.value
-    };
-
-    habilidades.push(nuevaHabilidad);
-    mostrarHabilidades();
-    habilidadForm.reset();
+btnFormEstudio.addEventListener("click", () => {
+    if (formEstudio.style.display === "none") {
+        formEstudio.style.display = "block";
+    } else {
+        formEstudio.style.display = "none";
+    }
 });
 
 
-mostrarHabilidades();
+formEstudio.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nuevoEstudio = {
+        titulo: document.getElementById("titulo-estudio").value,
+        centro: document.getElementById("centro-estudio").value,
+        fecha: document.getElementById("fecha-estudio").value
+    };
+
+    estudios.push(nuevoEstudio);
+
+    mostrarEstudios();
+    formEstudio.reset();
+    formEstudio.style.display = "none";
+});
+
+
+mostrarEstudios();
+
 

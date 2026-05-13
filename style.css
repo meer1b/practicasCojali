@@ -16,6 +16,8 @@ h3 {
 
 section {
     margin-bottom: 30px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
 }
 
 header {
@@ -70,6 +72,40 @@ nav {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-weight: bold;
+    transition: transform 0.2s;
+}
+
+#lista-habilidades p:hover {
+    transform: scale(1.05);
+}
+
+
+
+/*formacion*/
+#lista-estudios article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#lista-estudios article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#btn-form-estudio {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #1b4851;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-form-estudio:hover {
+    background-color: #307482;
 }
 
 
@@ -85,6 +121,12 @@ nav {
     padding: 15px;
     width: 250px;
     border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 
@@ -148,6 +190,12 @@ footer {
     .proyecto {
         width: 90%;
     }
+
+    #lista-habilidades {
+        justify-content: center;
+    }
+
+    
 }
 
 /* Colores para el Modo Oscuro */
@@ -166,6 +214,11 @@ body.dark h3 {
 }
 
 body.dark .proyecto{
+    border-color: #444;
+    background-color: #1e1e1e;
+}
+
+body.dark #lista-estudios article{
     border-color: #444;
     background-color: #1e1e1e;
 }
